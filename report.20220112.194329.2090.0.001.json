@@ -1,0 +1,493 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20220112.194329.2090.0.001.json",
+    "dumpEventTime": "2022-01-12T19:43:29Z",
+    "dumpEventTimeStamp": "1641996809201",
+    "processId": 2090,
+    "cwd": "/home/bnuser1/project/bbq-api",
+    "commandLine": [
+      "/usr/bin/node",
+      "/home/bnuser1/project/bbq-api/app.js"
+    ],
+    "nodejsVersion": "v12.8.0",
+    "glibcVersionRuntime": "2.23",
+    "glibcVersionCompiler": "2.17",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "12.8.0",
+      "v8": "7.5.288.22-node.16",
+      "uv": "1.30.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.39.1",
+      "napi": "4",
+      "llhttp": "1.1.4",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1c",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019a",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v12.8.0/node-v12.8.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.8.0/node-v12.8.0.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "4.4.0-157-generic",
+    "osVersion": "#185-Ubuntu SMP Tue Jul 23 09:17:01 UTC 2019",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Xeon(R) CPU E5-2620 v2 @ 2.10GHz",
+        "speed": 2100,
+        "user": 1068700,
+        "nice": 0,
+        "sys": 263200,
+        "idle": 19124200,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Xeon(R) CPU E5-2620 v2 @ 2.10GHz",
+        "speed": 2100,
+        "user": 763800,
+        "nice": 0,
+        "sys": 231400,
+        "idle": 19454500,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Xeon(R) CPU E5-2620 v2 @ 2.10GHz",
+        "speed": 2100,
+        "user": 773700,
+        "nice": 0,
+        "sys": 244200,
+        "idle": 19432000,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Xeon(R) CPU E5-2620 v2 @ 2.10GHz",
+        "speed": 2100,
+        "user": 719500,
+        "nice": 0,
+        "sys": 238000,
+        "idle": 19496400,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Xeon(R) CPU E5-2620 v2 @ 2.10GHz",
+        "speed": 2100,
+        "user": 737300,
+        "nice": 0,
+        "sys": 235800,
+        "idle": 19496600,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Xeon(R) CPU E5-2620 v2 @ 2.10GHz",
+        "speed": 2100,
+        "user": 700700,
+        "nice": 0,
+        "sys": 215400,
+        "idle": 19554700,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Xeon(R) CPU E5-2620 v2 @ 2.10GHz",
+        "speed": 2100,
+        "user": 667500,
+        "nice": 0,
+        "sys": 223700,
+        "idle": 19575000,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Xeon(R) CPU E5-2620 v2 @ 2.10GHz",
+        "speed": 2100,
+        "user": 605000,
+        "nice": 0,
+        "sys": 222400,
+        "idle": 19635600,
+        "irq": 0
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "ens160",
+        "internal": false,
+        "mac": "00:50:56:be:0d:92",
+        "address": "10.10.0.158",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "ens160",
+        "internal": false,
+        "mac": "00:50:56:be:0d:92",
+        "address": "fe80::250:56ff:febe:d92",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 2
+      }
+    ],
+    "host": "server33"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000000000ad5b45",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x00000000009b17b3",
+      "symbol": "node::OnFatalError(char const*, char const*) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b0ee8e",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b0f209",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cec115",
+      "symbol": " [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cf795b",
+      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cf8677",
+      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cfb1a8",
+      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationType, v8::internal::AllocationAlignment) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cc4ab7",
+      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationType) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000f9b678",
+      "symbol": "v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x000000000131d9b9",
+      "symbol": " [/usr/bin/node]"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2188787712,
+    "totalCommittedMemory": 1813497344,
+    "usedMemory": 1788541512,
+    "availableMemory": 387254368,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 32272,
+        "capacity": 261832,
+        "used": 31960,
+        "available": 229872
+      },
+      "new_space": {
+        "memorySize": 33554432,
+        "committedMemory": 33076192,
+        "capacity": 16757248,
+        "used": 16414312,
+        "available": 342936
+      },
+      "old_space": {
+        "memorySize": 2144481280,
+        "committedMemory": 1770125408,
+        "capacity": 2123770248,
+        "used": 1762873520,
+        "available": 360896728
+      },
+      "code_space": {
+        "memorySize": 1474560,
+        "committedMemory": 1306400,
+        "capacity": 1046016,
+        "used": 1046016,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 3936256,
+        "committedMemory": 3878032,
+        "capacity": 3169760,
+        "used": 3169760,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 5029888,
+        "committedMemory": 5029888,
+        "capacity": 5002488,
+        "used": 5002488,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 3456,
+        "used": 3456,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 16757248,
+        "used": 0,
+        "available": 16757248
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 41.6,
+    "kernelCpuSeconds": 5.616,
+    "cpuConsumptionPercent": 2.31451,
+    "maxRss": 2795515904,
+    "pageFaults": {
+      "IORequired": 0,
+      "IONotRequired": 1023933
+    },
+    "fsActivity": {
+      "reads": 0,
+      "writes": 136
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 24.624,
+    "kernelCpuSeconds": 3.612,
+    "cpuConsumptionPercent": 1.38412,
+    "fsActivity": {
+      "reads": 0,
+      "writes": 136
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "npm_package_dependencies_winston_daily_rotate_file": "^3.1.3",
+    "npm_config_version_commit_hooks": "true",
+    "npm_config_user_agent": "yarn/1.17.3 npm/? node/v12.8.0 linux x64",
+    "npm_package_scripts_lint_html": "eslint **/*.js -f html -o ./reports/lint-results.html",
+    "npm_config_bin_links": "true",
+    "npm_node_execpath": "/usr/bin/node",
+    "npm_package_devDependencies_nodemon": "^1.14.9",
+    "npm_package_dependencies_node_fetch": "^2.6.1",
+    "npm_config_init_version": "1.0.0",
+    "npm_package_dependencies_csvtojson": "^2.0.10",
+    "HOME": "/home/bnuser1",
+    "OLDPWD": "/home/bnuser1",
+    "npm_package_devDependencies_mocha": "^6.1.4",
+    "npm_package_dependencies_convert_csv_to_json": "^0.0.15",
+    "npm_package_dependencies_express_validation": "^1.0.2",
+    "npm_package_engines_node": ">=8.10.0",
+    "npm_config_init_license": "MIT",
+    "YARN_WRAP_OUTPUT": "false",
+    "npm_config_version_tag_prefix": "v",
+    "npm_package_scripts_lint_fix": "eslint --fix --ext .js application configurations helpers middlewares utilities",
+    "npm_package_dependencies_moment": "^2.24.0",
+    "npm_package_dependencies_dotenv": "^7.0.0",
+    "npm_package_dependencies_compression": "^1.7.4",
+    "npm_package_description": "# Author : Pulkit chadha.",
+    "npm_package_dependencies_raven": "^2.6.2",
+    "npm_package_dependencies_qs": "^6.7.0",
+    "npm_package_readmeFilename": "README.md",
+    "npm_package_dependencies_fcm_push": "^1.1.3",
+    "npm_package_dependencies_pg_hstore": "2.3.2",
+    "npm_package_scripts_dev": "nodemon app.js",
+    "LOGNAME": "bnuser1",
+    "npm_package_devDependencies_eslint_plugin_import": "^2.11.0",
+    "npm_package_dependencies_request": "^2.88.0",
+    "npm_package_scripts_staging": "NODE_ENV=staging node app.js",
+    "npm_package_dependencies_express": "4.16.4",
+    "npm_package_private": "true",
+    "npm_package_scripts_lint": "eslint --ext .js application configurations helpers middlewares utilities",
+    "npm_config_registry": "https://registry.yarnpkg.com",
+    "npm_package_dependencies_request_promise": "^4.2.4",
+    "npm_package_scripts_start": "NODE_ENV=production node app.js",
+    "npm_config_ignore_scripts": "",
+    "npm_package_dependencies_multer": "^1.4.2",
+    "npm_package_dependencies_axios": "^0.21.1",
+    "PATH": "/tmp/yarn--1641994764041-0.8286046837488514:/home/bnuser1/project/bbq-api/node_modules/.bin:/home/bnuser1/.config/yarn/link/node_modules/.bin:/home/bnuser1/.yarn/bin:/usr/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/usr/bin/node_modules/npm/bin/node-gyp-bin:/usr/bin:/bin",
+    "NODE": "/usr/bin/node",
+    "npm_package_dependencies_nodemailer": "6.1.1",
+    "npm_package_repository_type": "git",
+    "npm_package_name": "bbq-bd-api",
+    "npm_package_dependencies_image_downloader": "^4.0.2",
+    "npm_package_devDependencies_eslint_config_airbnb": "^17.1.0",
+    "npm_package_dependencies_serve_static": "1.13.2",
+    "LANG": "en_US.UTF-8",
+    "npm_package_devDependencies_should": "^13.2.1",
+    "npm_package_devDependencies_eslint": "^5.16.0",
+    "npm_package_dependencies_winston": "^3.2.1",
+    "npm_package_dependencies_firebase_admin": "^7.3.0",
+    "npm_package_dependencies_connect_multiparty": "^2.2.0",
+    "npm_lifecycle_script": "NODE_ENV=production node app.js",
+    "npm_package_devDependencies_supertest": "^4.0.2",
+    "npm_package_dependencies_underscore_string": "^3.3.4",
+    "npm_package_dependencies_express_session": "^1.15.6",
+    "npm_package_dependencies_aws_sdk": "^2.309.0",
+    "npm_package_dependencies_sequelize": "4.43.0",
+    "npm_package_dependencies_require_directory": "^2.1.1",
+    "npm_package_dependencies_body_parser": "1.18.3",
+    "npm_config_version_git_message": "v%s",
+    "SHELL": "/bin/sh",
+    "npm_lifecycle_event": "start",
+    "npm_package_dependencies_node_gcm": "^1.0.2",
+    "npm_package_repository_url": "https://gitlab.com/empleos/platform.git",
+    "npm_package_version": "0.0.1",
+    "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"start\"],\"original\":[\"run\",\"start\"]}",
+    "npm_package_dependencies_joi": "^14.3.1",
+    "npm_package_dependencies_ejs": "^2.5.9",
+    "npm_package_dependencies_cors": "2.8.5",
+    "npm_package_engines_yarn": ">=1.9.4",
+    "npm_package_dependencies_lodash": "^4.17.10",
+    "npm_config_version_git_tag": "true",
+    "npm_config_version_git_sign": "",
+    "npm_config_strict_ssl": "true",
+    "npm_package_dependencies__sendgrid_mail": "^6.3.1",
+    "PWD": "/home/bnuser1/project/bbq-api",
+    "npm_execpath": "/usr/share/yarn/bin/yarn.js",
+    "npm_package_dependencies_node_cron": "^2.0.3",
+    "npm_package_dependencies_helmet": "^3.12.0",
+    "npm_package_engines_npm": "6.2.0",
+    "npm_config_save_prefix": "^",
+    "npm_config_ignore_optional": "",
+    "npm_package_devDependencies_babel_eslint": "^10.0.1",
+    "npm_package_dependencies_jsonwebtoken": "^8.2.1",
+    "NODE_ENV": "production",
+    "INIT_CWD": "/home/bnuser1/project/bbq-api",
+    "npm_package_dependencies_pg": "7.10.0",
+    "npm_package_dependencies_node_uuid": "1.4.8",
+    "npm_package_dependencies_morgan": "^1.9.0",
+    "PORT": "3000",
+    "FRONTEND_HOST": "http://partner.barbequenation.com",
+    "LOGO": "http://partner.barbequenation.com/bbq-mail-logo.jpg",
+    "APP_SECRET": "43576965bee24462f78a2d8080cdaad0",
+    "APP_HOST": "https://partner.barbequenation.com",
+    "DATABASE_URL": "postgres://bbqadmin:g3am1ba5ck9de8er@127.0.0.1:5432/bbq",
+    "DB_SYNC": "true",
+    "FCM_DB_URL": "https://bbq-notificataion.firebaseio.com",
+    "FCM_SERVER_API_KEY": "AAAAXHDgl4I:APA91bFuNGWhfdcDZMciP2XdFf2r-egrb-C6PumKjJ1nMvg1ZHgIRChzL8AYy2e-dGiTCql4Y-pmGkf52Tx4X7aog7KxS-0-VqBG7aJicXYU0e32n9moSClsQcepvJ7TJ6HYd0qcz5kA",
+    "ADMIN_FULL_NAME": "admin",
+    "ADMIN_EMAIL": "admin@bbq.com",
+    "ADMIN_PASSWORD": "bbq!23",
+    "ADMIN_USER_NAME": "admin",
+    "EMAIL_SERVICE": "",
+    "EMAIL_USER": "",
+    "EMAIL_PASSWORD": "",
+    "EMAIL_FROM": "noreply@bbq.com",
+    "ENABLE_EXPRESS_LOG": "true",
+    "ENABLE_DB_LOG": "false",
+    "ENABLE_CLUSTERING": "true",
+    "ENABLE_LINTING": "true",
+    "JWT_EXPIRE_TIME": "24h",
+    "SENDGRID_API_KEY": "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",
+    "PUSHER_APP_ID": "",
+    "PUSHER_KEY": "",
+    "PUSHER_SECRET": "",
+    "PUSHER_CLUSTER": "us2",
+    "SENTRY_DSN": "https://ff73a4a86a4e4498ad88d638a3f2dbdb@sentry.io/1478304",
+    "BBQ_API_HOST_1": "http://10.10.0.18/EmployeeInfo/Service1.svc",
+    "BBQ_API_HOST_2": "https://gvgc.bnhl.in/PartnerPortalAPI/Service1.svc",
+    "SMS_GATEWAY_API_KEY": "294914AttwCirh7PL5d836fd9",
+    "SMS_GATEWAY_SENDER_ID": "BARBEQ",
+    "SMS_GATEWAY_COUNTRY": "91",
+    "ADMIN_NOTIFY_EMAIL": "om@barbequenation.com",
+    "APPROVAL_HOST": "https://contract.barbequenation.com",
+    "AWS_BUCKET_NAME": "bbqpartnerportal",
+    "AWS_ACCESS_ID": "AKIAQWSSYCXX2C7EK66H",
+    "AWS_SECRET_KEY": "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"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 65536,
+      "hard": 65536
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 1048576,
+      "hard": 1048576
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": "unlimited"
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 64018,
+      "hard": 64018
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "/lib/x86_64-linux-gnu/libdl.so.2",
+    "/lib/x86_64-linux-gnu/librt.so.1",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6",
+    "/lib/x86_64-linux-gnu/libm.so.6",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2",
+    "/lib/x86_64-linux-gnu/libnss_files.so.2",
+    "/lib/x86_64-linux-gnu/libnss_dns.so.2",
+    "/lib/x86_64-linux-gnu/libresolv.so.2"
+  ]
+}

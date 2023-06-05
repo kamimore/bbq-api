@@ -1,0 +1,35 @@
+module.exports = async function (instance) {
+    try {
+        if (['approved', 'rejected'].includes(instance.status)) {
+            await domain.VendorApprovalRequest.destroy({
+                where: {
+                    vendorId: instance.vendorId,
+                    status: 'pending',
+                    superCategoryId: instance.superCategoryId,
+                },
+            });
+        }
+
+        if (instance.status === 'rejected') {
+            const vendor = await domain.Vendor.findOne({
+                where: {
+                    id: instance.vendorId,
+                },
+                attributes: ['userId'],
+            });
+
+            if (vendor && vendor.userId && instance.superCategoryId) {
+                await domain.UserSuperCategory.destroy({
+                    where: {
+                        userId: vendor.userId,
+                        superCategoryId: instance.superCategoryId,
+                    },
+                });
+            }
+        }
+        return Promise.resolve(instance);
+    } catch (error) {
+        Logger.error(error);
+        return Promise.reject(error);
+    }
+};

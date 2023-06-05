@@ -1,0 +1,44 @@
+{
+    "parser": "babel-eslint",
+    "extends": "airbnb/base",
+    "env": {
+        "mocha": true,
+        "node": true
+    },
+    "globals": {
+        "app": false,
+        "domain": false,
+        "configHolder": false,
+        "Logger": false,
+        "express": false,
+        "BASE_PATH": false,
+        "db": false,
+        "To": false,
+        "mkdirp": false,
+        "validate": false,
+        "Joi": false,
+        "url": false,
+        "router": false,
+        "path": false,
+        "Sequelize": false,
+        "SequelizeConnect": false,
+        "requireDirectory": false,
+        "promisify": false,
+        "configurationHolder": false,
+        "passport": false
+    },
+    "rules": {
+        "no-empty-label": 0,
+        "space-after-keywords": 0,
+        "indent": 0,
+        "arrow-body-style": [2, "as-needed"],
+        "eol-last": 0,
+        "func-names": 0,
+        "no-param-reassign": 0,
+        "one-var": [0, "never"],
+        "max-len": [2, 120, 4],
+        "no-underscore-dangle": 0,
+        "linebreak-style": 0,
+        "max-len": 0
+    }
+}

@@ -1,0 +1,1 @@
+ALTER TABLE public.question_category ADD COLUMN "order" integer;

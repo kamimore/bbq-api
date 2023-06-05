@@ -1,0 +1,1 @@
+ALTER TABLE public.vendor ADD COLUMN show_ledger boolean DEFAULT false;

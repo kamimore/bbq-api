@@ -1,0 +1,1 @@
+Delete table: mst_area_code, mst_city, mst_region, mst_state, vendor_supply_location, vendor_super_category, mst_store

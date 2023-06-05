@@ -1,0 +1,1 @@
+ALTER TABLE public.vendor_bank_detail ADD COLUMN branch_name text;

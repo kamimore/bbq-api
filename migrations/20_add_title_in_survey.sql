@@ -1,0 +1,1 @@
+ALTER TABLE public.site_survey ADD COLUMN title text;

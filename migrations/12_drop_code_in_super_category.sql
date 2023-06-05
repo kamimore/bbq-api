@@ -1,0 +1,1 @@
+ALTER TABLE public.mst_super_category DROP COLUMN code;

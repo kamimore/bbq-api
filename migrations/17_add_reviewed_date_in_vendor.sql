@@ -1,0 +1,1 @@
+ALTER TABLE public.vendor RENAME approval_date TO reviewed_date;

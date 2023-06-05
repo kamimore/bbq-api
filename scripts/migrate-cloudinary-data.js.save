@@ -1,0 +1,75 @@
+require('../configurations/init');
+const imageDownloader = require('image-downloader');
+const AWS = require('aws-sdk')
+const axios = require('node-fetch');
+const fs = require('fs');
+
+const bucket = new AWS.S3({
+    accessKeyId: process.env.AWS_ACCESS_ID,
+    secretAccessKey: process.env.AWS_SECRET_KEY
+});
+
+(async function () {
+    try {
+        console.log("ENV", process.env.NODE_ENV)
+        let vendorDocuments = await domain.VendorDocument.findAll({
+            where: {
+                fileUrl: {
+                    $notILike: "%amazonaws.com%"
+                }
+            },
+            limit: 1
+        });
+        console.log("******************************total vendor document ", vendorDocuments.length)
+        let vendorCount = 1
+        for (const vDoc of vendorDocuments) {
+            const url = vDoc.fileUrl.split('/upload/').join('/upload/fl_attachment/');
+            const name = vDoc.fileName.split(" ").join("-")
+            if (url) {
+                const options = {
+                    url,
+                    dest: `../public/image/${Date.now()}-${name}`,
+                };
+                const file = await imageDownloader.image(options);
+
+                let fileUrl = file.filename//.split('/public')[1]
+                //fileUrl = `${process.env.APP_HOST}${fileUrl}`
+			
+		//console.log(fileUrl)
+                //let response = await axios(fileUrl);
+		//console.log("response")
+                //response = await response.buffer();
+			
+		//const fileBuffer = Buffer.from(fileUrl)
+		const fileRead = fs.readFileSync(fileUrl)
+                const result = await bucket.upload({
+                    Body: fileRead,
+                    Key: `${Date.now()}-${vDoc.fileName.split(" ").join("-")}`,
+                    Bucket: process.env.AWS_BUCKET_NAME,
+                    ACL: 'public-read'
+                }).promise();
+
+                await domain.VendorDocument.update({
+                    fileUrl: result.Location
+                }, {
+                    where: {
+                        id: vDoc.id
+                    }
+                })
+                console.log(`Image - ${vDoc.fileName} - for Vendor Document ${vDoc.id} sucessfully migrated, count: ${vendorCount} `)
+            } else {
+                console.log(`Url not found of vendor document ${vDoc.id}`)
+            }
+
+            vendorCount++;
+        }
+
+        console.log("Script successfully completed!")
+        console.log("All images from the DataBase has been sucessfully migrated from cloudinary to localServer! ")
+
+        process.exit(0);
+    } catch (error) {
+        console.log('Error occured', error);
+        process.exit(1);
+    }
+}());

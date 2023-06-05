@@ -1,0 +1,1 @@
+ALTER TABLE public.vendor ADD COLUMN vendor_type_id integer;

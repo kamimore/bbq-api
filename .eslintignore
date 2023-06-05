@@ -1,0 +1,6 @@
+public/*.js
+node_modules/*.js
+configurations/layers
+configurations/passport
+application/controller-service-layer/views
+test.js

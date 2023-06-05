@@ -1,0 +1,1 @@
+ALTER TABLE public.vendor_location ADD COLUMN address_2 text;
